@@ -1,0 +1,380 @@
+body {
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    background: #1e1e1e; /* neutral */
+
+}
+section {
+    margin: 0;
+    padding: 0;
+
+}
+
+h1, h2, p { 
+    margin: 0; 
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #4B080D, #bb101e);
+    
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px;
+  }
+
+.nav-links a {
+    margin-right: 50px;
+    font-size: 20px;
+    color: #D9C3A9;
+    text-decoration: none; /* removes underline */  
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+.menu-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    padding-left: 15px;
+    cursor: pointer;
+    display: grid;
+    gap: 6px;            /* space between the 3 lines */
+}
+ 
+.menu-btn span{
+    width: 40px;
+    height: 7px;
+    background: #D9C3A9;
+    display: block;
+    border-radius: 2px;
+}
+.menu-btn span:hover {
+    opacity: 0.7;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-left: auto;
+    text-align: right;
+    color: #D9C3A9;
+    flex: 1;
+    transform: translateY(-150px);
+}
+
+.hero-text h1 {
+    font-size: 100px;
+    line-height: 0.95;
+}
+.tagline {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+    padding: 0 80px;
+}
+
+.hero-art {
+    flex: 0 0 480px
+}
+
+.hero-art img {
+    max-width: 160%;
+    height: auto;
+    
+}
+.about-me {
+    min-height: 100vh;
+    padding: 6rem 8rem;
+    
+    background: linear-gradient(180deg, #bb101e, #4B080D);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+}
+
+.about-me h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 7.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    line-height: 1;
+    color: #D9C3A9;
+    align-self: start;
+    margin-top: 2rem;
+
+}
+
+.about-title{
+    position: relative;
+    display: inline-block;
+}
+
+.about-title::after, 
+.about-title::before {
+    content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #D9C3A9;
+  left: 100%;
+  margin-left: -90px;
+
+
+}
+.about-title::before {
+    top: 40px;
+  }
+.about-title::after {
+    top: 95px;
+  }
+
+.about-me p {
+    max-width: 520px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #D9C3A9;
+}
+.about-text {
+    align-self: center;
+    transform: translateY(-40px);
+}
+
+.edu-skills {
+    font-size: 1.5rem;
+    min-height: 100vh;
+    padding: 9rem 9rem;
+    background: linear-gradient(180deg, #bb101e, #4B080D);
+    color: #D9C3A9;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+  
+  .tab {
+    position: relative;
+    background: none;
+    border: none;
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    color: #D9C3A9;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    padding-bottom: 10px;
+  }
+  
+  .tab.active {
+    opacity: 1;
+  }
+  
+  .tab:hover {
+    opacity: 0.7;
+  }
+  
+  .content {
+    display: none;
+    max-width: 600px;
+  }
+  
+  .content.active {
+    display: block;
+  }
+
+  .tab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #D9C3A9;
+    transition: width 0.3s ease;
+  }
+  .tab.active::after {
+    width: 100%;
+  }
+   
+
+  
+
+  .projects {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #4B080D, #bb101e);
+    font-family: "Playfair Display", serif;
+    color: #D9C3A9;
+    padding: 50px 100px;
+  }
+  
+
+.projects h2 {
+  margin-top: 240px;
+  padding-left: 100px ;
+  grid-column: 1 / 2;
+  font-size: 90px; /* big, editorial like Figma */
+  align-self: start;
+  position: relative;
+  font-weight: 400;
+}
+
+.projects h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 120px;
+  height: 3px;
+  background-color: #D9C3A9;
+}
+
+
+.projects h2::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 220px);
+  left: calc(100% + 120px);
+  width: 4px;
+  height: 220px;
+  background-color: #D9C3A9;
+}
+
+.corner-line {
+  position: absolute;
+  top: calc(50% - 220px);
+  left: calc(100% + 120px);
+  width: 120px;
+  height: 3px;
+  background-color: #D9C3A9;
+}
+
+
+
+
+.project-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  column-gap: 160px;
+
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+  grid-column: 2 / 3;
+}
+
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 2rem;
+  padding: 18px 0;
+}
+
+.project-row::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #D9C3A9;
+  flex-shrink: 0;
+}
+
+.project-title {
+  position: relative;
+  color: #D9C3A9;
+  text-decoration: none;
+}
+
+
+.project-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;          /* match your line thickness */
+  background-color: #D9C3A9;
+  transition: width 0.3s ease;
+}
+
+.project-title:hover::after {
+  width: 100%;
+}
+
+
+
+.contact {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #4B080D, #bb101e);
+    font-family: "Playfair Display", serif;
+    color: #D9C3A9;
+    text-align: center;
+}
+
+.contact h2 {
+  font-size: 80px;
+  text-align: center;
+  padding-top: 80px;
+  font-weight: 400;
+}
+
+.contact p {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.contact p a {
+  position: relative;
+  color: #D9C3A9;
+  text-decoration: none;
+}
+
+.contact p a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;          /* match your line thickness */
+  background-color: #D9C3A9;
+  transition: width 0.3s ease;
+}
+
+
+.contact p a:hover::after {
+  width: 100%;
+}
+
+.cv {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  display: block;
+  width: fit-content;
+  margin: 60px auto 0;
+  border-radius: 12px;
+  padding: 15px 28px;
+  background-color: #D9C3A9; /* button box */
+  color: #4B080D;            /* text colour */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cv:hover {
+  opacity: 0.7;
+}
